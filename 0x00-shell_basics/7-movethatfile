@@ -1,2 +1,2 @@
 #!/bin/bash
-mv -t betty holberton\
+mv betty holberton\
