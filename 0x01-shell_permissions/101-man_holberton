@@ -1,7 +1,7 @@
 .TH man 2 "04 May 2015" "0.32" "holberton man page"
 .SH NAME
-.B holberton
-- become a full-stack software engineer.
+.B holberton -
+become a full-stack software engineer.
 .SH SYNOPSIS
 holberton [STUDENTNAME]
 .SH DESCRIPTION
@@ -14,4 +14,4 @@ does not take any options. However, you can supply studentname.
 .SH BUGS
 No known bugs.
 .SH AUTHOR
-Julien Barbier, Sylvain Kalache, Sophie Barbier, Guillaume Salva, Kris Bredemeier, Julien Cyr, Alex Gautier and all the Holberton mentors
+Julien Barbier, Sylvain Kalache, Sophie Barbier, Guillaume Salva, Kris Bredemeier, Julien Cyr, Alex Gautier and all the Holberton mentors 
