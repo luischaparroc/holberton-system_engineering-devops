@@ -1,4 +1,4 @@
-./" Holberton School Man Page
+#!/bin/bash 
 .TH man 2 "04 May 2015" "0.32" "holberton man page"
 .SH NAME
 \ holberton = become a full-stack software engineer.
