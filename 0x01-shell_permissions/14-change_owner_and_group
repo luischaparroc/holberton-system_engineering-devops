@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod betty:holberton .
+chown betty:holberton .
