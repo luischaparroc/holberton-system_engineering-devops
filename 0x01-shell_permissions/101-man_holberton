@@ -1,16 +1,16 @@
-.\" Manpage for man
+./" Holberton School Man Page
 .TH man 2 "04 May 2015" "0.32" "holberton man page"
 .SH NAME
-man \- holberton = become a full-stack software engineer.
+\ holberton = become a full-stack software engineer.
 .SH SYNOPSIS
-man \- holberton LUIS CHAPARRO
+\ holberton LUIS CHAPARRO
 .SH DESCRIPTION
-man \- Holberton School is a project-based alternative to college for the next generation of software enginers.
+\ Holberton School is a project-based alternative to college for the next generation of software enginers.
 .SH OPTIONS
-man \- holberton does not take any options. However, you can supply studentname.
+\ holberton does not take any options. However, you can supply studentname.
 .SH SEE ALSO
-man \- peerlearning(2), projectbased(2), fullstack(2), Betty(1)
+\ peerlearning(2), projectbased(2), fullstack(2), Betty(1)
 .SH BUGS
-man \- No known bugs.
+\ No known bugs.
 .SH AUTHOR
-man \- Julien Barbier, Sylvain Kalache, Sophie Barbier, Guillaume Salva, Kris Bredemeier, Julien Cyr, Alex Gautier and all the Holberton mentors 
+\ Julien Barbier, Sylvain Kalache, Sophie Barbier, Guillaume Salva, Kris Bredemeier, Julien Cyr, Alex Gautier and all the Holberton mentors
