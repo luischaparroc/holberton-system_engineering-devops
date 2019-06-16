@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -name "*.gif" -exec ls -lS {} + | awk '{print $5, $9}' | sort -nk 1 | rev | cut -d '/' -f 1 | cut -d '.' -f 2- | rev
+find . -type f -name "*.gif" -exec ls -l {} + | sort -k 9 | awk '{print $5, $9}' | sort -nk 1 | rev | cut -d '/' -f 1 | cut -d '.' -f 2- | rev
