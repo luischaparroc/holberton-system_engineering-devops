@@ -7,7 +7,7 @@ Project done during **Full Stack Software Engineering studies** at **Holberton S
 * Tested on Ubuntu 14.04 LTS
 
 ## Files
-All of the following files are scripts, except `101-man_holberton`:
+All of the following files are scripts:
 
 | Filename | Description |
 | -------- | ----------- |
