@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+x=0
+until [ $x -gt 9 ]
+do
+	echo "Holberton School"
+	((x++))
+done
