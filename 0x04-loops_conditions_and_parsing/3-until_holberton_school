@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Creating a script that uses an until loop
 x=0
 until [ $x -gt 9 ]
 do

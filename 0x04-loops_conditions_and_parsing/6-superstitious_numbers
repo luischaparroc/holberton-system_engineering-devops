@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Creating a script that uses case statements
 x=1
 while [ $x -le 20 ]
 do

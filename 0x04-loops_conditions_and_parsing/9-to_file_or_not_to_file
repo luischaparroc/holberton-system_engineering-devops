@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Creating a script that uses nested if statements
 file="holbertonschool"
 if [ -e $file ]
 then

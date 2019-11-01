@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Creating a script that uses a while loop
 x=1
 while [ $x -le 10 ]
 do
