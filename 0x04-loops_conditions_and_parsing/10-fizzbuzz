@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Program that prints FizzBuzz sequence
 for i in {1..100}
 do
     if [ $((i % 5)) -eq 0 -a $((i % 3)) -eq 0 ]
