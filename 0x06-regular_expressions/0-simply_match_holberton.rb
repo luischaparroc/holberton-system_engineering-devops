@@ -4,3 +4,4 @@ if ARGV.length >= 1
     print word.match(/Holberton/)
   }
 end
+puts
