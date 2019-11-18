@@ -1,7 +1,2 @@
 #!/usr/bin/env ruby
-if ARGV.length >= 1
-  ARGV[0].scan(/\w+/).each { |word|
-    print word.match(/hb?tn/)
-  }
-end
-puts
+puts ARGV[0].scan(/hb?tn/).join
