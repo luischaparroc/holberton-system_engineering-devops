@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Script that installs Nginx server
-apt-get update
+apt-get -y update
 apt-get -y install nginx
 echo "Holberton School" > /var/www/html/index.nginx-debian.html
 systemctl start nginx
