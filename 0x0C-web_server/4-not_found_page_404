@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Script that installs Nginx server, redirects /redirect_me and customizes 404 not found
+apt-get -y update
+apt-get -y install nginx
+echo "Holberton School" > /var/www/html/index.nginx-debian.html
+sed -i "s/server_name _;/server_name _;\n\trewrite ^\/redirect_me https:\/\/github.com\/luischaparroc permanent;/" /etc/nginx/sites-available/default
+echo "Ceci n'est pas une page" > /usr/share/nginx/html/custom_404.html
+sed '50 a \terror_page 404 /custom_404.html;' /etc/nginx/sites-enabled/default
+sed '51 a \tlocation = /custom_404.html {' /etc/nginx/sites-enabled/default
+sed '52 a \t\troot /usr/share/nginx/html;' /etc/nginx/sites-enabled/default
+sed '53 a \t\tinternal;' /etc/nginx/sites-enabled/default
+sed '54 a \t}' /etc/nginx/sites-enabled/default
+sed '55 a \\n' /etc/nginx/sites-enabled/default
+service nginx start
