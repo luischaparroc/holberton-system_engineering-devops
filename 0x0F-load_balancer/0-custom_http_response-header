@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Script that configures Nginx server with a custom header
+sed -i "s/include \/etc\/nginx\/sites-enabled\/\*;/include \/etc\/nginx\/sites-enabled\/\*;\n\tadd_header X-Served-By \"$HOSTNAME\";/" /etc/nginx/nginx.conf
+service nginx reload
