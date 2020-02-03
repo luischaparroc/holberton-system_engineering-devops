@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Script that starts nginx as nginx user
+chmod 777 /etc/nginx/nginx.conf
+chown nginx:nginx /etc/nginx/nginx.conf
+sed -i "s/80/8080/g" /etc/nginx/sites-available/default
+pkill -9 apache
+su nginx -c "service nginx restart"
