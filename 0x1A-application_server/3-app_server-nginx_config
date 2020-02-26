@@ -43,7 +43,7 @@ server {
 	# Add index.php to the list if you are using PHP
 	index index.html index.htm index.nginx-debian.html;
 
-	server_name _;
+	server_name  35.231.33.237;
 
 	rewrite ^/redirect_me https://github.com/luischaparroc permanent;
 
@@ -54,18 +54,28 @@ server {
 		internal;
 	}
 
+	location /static {
+	}
+
 	location / {
 		# First attempt to serve request as file, then
 		# as directory, then fall back to displaying a 404.
 		try_files $uri $uri/ =404;
 	}
 
-	location /airbnb-onepage {
-		proxy_pass http://0.0.0.0:5000/airbnb-onepage;
+	location /airbnb-onepage/ {
+		include proxy_params;
+		proxy_pass http://0.0.0.0:5000/airbnb-onepage/;
 	}
 
 	location /airbnb-dynamic/number_odd_or_even/ {
-		proxy_pass http://127.0.0.1:5001/number_odd_or_even/;
+		include proxy_params;
+		proxy_pass http://0.0.0.0:5001/number_odd_or_even/;
+	}
+
+	location /api/ {
+		include proxy_params;
+		proxy_pass http://0.0.0.0:5002/api/;
 	}
 
 	# pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
