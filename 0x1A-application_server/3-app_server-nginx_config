@@ -16,6 +16,7 @@
 server {
 	listen 80 default_server;
 	listen [::]:80 default_server;
+	server_name  _;
 
 	# SSL configuration
 	#
@@ -42,8 +43,6 @@ server {
 
 	# Add index.php to the list if you are using PHP
 	index index.html index.htm index.nginx-debian.html;
-
-	server_name  35.231.33.237;
 
 	rewrite ^/redirect_me https://github.com/luischaparroc permanent;
 
