@@ -53,14 +53,13 @@ server {
 		internal;
 	}
 
-	location /static {
-	}
-
 	location / {
 		# First attempt to serve request as file, then
 		# as directory, then fall back to displaying a 404.
 		try_files $uri $uri/ =404;
 	}
+
+	server_name 127.0.0.1 35.231.33.237;
 
 	location /airbnb-onepage/ {
 		include proxy_params;
