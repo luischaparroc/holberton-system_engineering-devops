@@ -16,7 +16,7 @@
 server {
 	listen 80 default_server;
 	listen [::]:80 default_server;
-	server_name  _;
+	server_name 35.231.33.237;
 
 	# SSL configuration
 	#
@@ -38,79 +38,30 @@ server {
 
 	location /hbnb_static/ {
 		alias /data/web_static/current/;
-		autoindex off;
+	}
+
+	location /airbnb-onepage/ {
+		 include proxy_params;
+		 proxy_pass http://0.0.0.0:5000/airbnb-onepage/;
 	}
 
 	# Add index.php to the list if you are using PHP
 	index index.html index.htm index.nginx-debian.html;
 
-	rewrite ^/redirect_me https://github.com/luischaparroc permanent;
-
-	error_page 404 /custom_404.html;
-
-	location = /custom_404.html {
-		root /usr/share/nginx/html;
-		internal;
+	server_name _;
+	error_page 404 /404_error.html;
+	location = /404_error.html {
+		root /var/www/html;
+		internal;	
 	}
+	rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;
+	rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;
 
 	location / {
+		add_header X-Served-By $hostname;
+		add_header X-Served-By $hostname;
 		# First attempt to serve request as file, then
 		# as directory, then fall back to displaying a 404.
 		try_files $uri $uri/ =404;
 	}
-
-	server_name 127.0.0.1 35.231.33.237;
-
-	location /airbnb-onepage/ {
-		include proxy_params;
-		proxy_pass http://0.0.0.0:5000/airbnb-onepage/;
-	}
-
-	location /airbnb-dynamic/number_odd_or_even/ {
-		include proxy_params;
-		proxy_pass http://0.0.0.0:5001/number_odd_or_even/;
-	}
-
-	location /api/ {
-		include proxy_params;
-		proxy_pass http://0.0.0.0:5002/api/;
-	}
-
-	# pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
-	#
-	#location ~ \.php$ {
-	#	include snippets/fastcgi-php.conf;
-	#
-	#	# With php7.0-cgi alone:
-	#	fastcgi_pass 127.0.0.1:9000;
-	#	# With php7.0-fpm:
-	#	fastcgi_pass unix:/run/php/php7.0-fpm.sock;
-	#}
-
-	# deny access to .htaccess files, if Apache's document root
-	# concurs with nginx's one
-	#
-	#location ~ /\.ht {
-	#	deny all;
-	#}
 }
-
-
-# Virtual Host configuration for example.com
-#
-# You can move that to a different file under sites-available/ and symlink that
-# to sites-enabled/ to enable it.
-#
-#server {
-#	listen 80;
-#	listen [::]:80;
-#
-#	server_name example.com;
-#
-#	root /var/www/example.com;
-#	index index.html;
-#
-#	location / {
-#		try_files $uri $uri/ =404;
-#	}
-#}
