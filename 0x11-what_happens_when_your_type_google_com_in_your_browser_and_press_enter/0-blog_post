@@ -1,0 +1,54 @@
+
+**Demystifying the Journey of a Web Request: What Happens When You Type "https://www.google.com" in Your Browser**
+
+*Introduction:*
+
+The seamless experience of browsing the web often conceals the intricate processes happening behind the scenes. When you type "https://www.google.com" into your browser's address bar and hit Enter, it triggers a fascinating journey involving various components of the web stack. In this article, we will unravel this journey, step by step, shedding light on the magic that brings your favorite websites to your screen.
+
+**Step 1: DNS Request:**
+
+Before your browser can connect to Google's servers, it needs to find out where they are located. This is where the Domain Name System (DNS) comes into play. When you hit Enter, your computer sends a DNS request to a DNS server, asking for the IP address associated with "www.google.com." This server may cache the IP or query other DNS servers to find the answer.
+
+**Step 2: TCP/IP Connection:**
+
+Once your computer knows where to find Google's servers, it initiates a TCP/IP connection to the provided IP address. This connection involves a three-way handshake, where both your computer and Google's servers exchange information to establish a reliable connection.
+
+**Step 3: Firewall Security:**
+
+As the connection is established, it passes through your computer's firewall. Firewalls are like security guards, monitoring and filtering incoming and outgoing traffic. They ensure that only safe and authorized data can flow in and out of your computer.
+
+**Step 4: HTTPS/SSL Encryption:**
+
+Security is paramount on the web, especially when transmitting sensitive data. Google uses HTTPS (Hypertext Transfer Protocol Secure) to encrypt the data exchanged between your browser and its servers. During the SSL (Secure Sockets Layer) handshake, a secure connection is established, safeguarding your information from prying eyes.
+
+**Step 5: Load-Balancer:**
+
+Google serves millions of users worldwide, and to manage this load efficiently, they employ load balancers. These smart devices distribute incoming traffic across multiple servers, ensuring optimal performance, redundancy, and high availability.
+
+**Step 6: Web Server:**
+
+The web server is where the real action happens. It receives your request and responds by sending back the web page you requested. Google uses powerful web servers like Apache or Nginx to handle these requests with lightning speed.
+
+**Step 7: Application Server:**
+
+Not all content on the web is static. Dynamic websites, like Google, rely on application servers to generate content on the fly. These servers process your request, execute scripts, and fetch data from databases or other sources to create the web page you see.
+
+**Step 8: Database Interaction:**
+
+Behind the scenes, Google relies on extensive databases to provide search results, personalized recommendations, and more. The application server communicates with these databases to fetch relevant information, ensuring that you receive the most up-to-date content.
+
+**Conclusion:**
+
+The journey of a web request, from DNS resolution to database interaction, involves a symphony of components working in harmony. Each plays a vital role in delivering a seamless browsing experience. Understanding these processes can deepen our appreciation for the technology that powers the web.
+
+**Share Your Insights:**
+
+Do you have any questions or insights about the inner workings of the web stack? Feel free to share them in the comments below!
+
+**Share the URL:**
+
+Read the full article on Medium: [Link to Your Blog Post]
+
+---
+
+This sample blog post provides a simplified explanation of what happens when you type "https://www.google.com" in your browser. You can expand on each step with more technical details and examples to create a more in-depth article.
