@@ -1,7 +1,7 @@
 # Postmortem
 Sample Postmortem: Outage Resolution
 
-##Issue Summary:
+## Issue Summary:
 
 Duration:
 Start Time: September 15, 2023, 14:00 UTC
@@ -13,7 +13,7 @@ Users Affected: 80% of users experienced slow page loading and checkout failures
 
 The root cause of the outage was an unexpected surge in traffic due to a flash sale event. Our load balancer's auto-scaling mechanism failed to respond adequately, causing server congestion.
 
-##Timeline:
+## Timeline:
 
 Detection Time: September 15, 2023, 14:15 UTC
 Detected by automated monitoring alert for high server load.
@@ -34,7 +34,7 @@ Root Cause and Resolution:
 
 The issue was caused by a surge in genuine user traffic, not a DDoS attack. Our auto-scaling algorithm was not optimized to handle such rapid traffic spikes. To resolve it, we manually scaled up server capacity and adjusted the auto-scaling algorithm parameters to respond more effectively to sudden traffic surges.
 
-##Corrective and Preventative Measures:
+## Corrective and Preventative Measures:
 
 Optimize auto-scaling parameters for more dynamic scaling.
 Implement more robust traffic monitoring and alerting systems.
